@@ -76,7 +76,7 @@ void child_process_exec(){
         //close after use
         close(fifo_fd);
 
-        int exec_ret = execl("/home/chen/demo_code/cpp_basic/build/fork/fork2", "fork2", "abcd",NULL);
+        int exec_ret = execl("/home/chen/demo_code/cpp_basic/cpp_basic/src/build/fork/fork2", "fork2", "abcd",NULL);
 
         //once exec_ret is 1, the reset of code cannot be executeds
         std::cout << "exec_ret is " << exec_ret << "\n";
@@ -121,8 +121,8 @@ void child_poress_msg(){
 
 int main(int argc, char** argv){
 
-    //create_child_process();
-    //child_process_exec();
+    create_child_process();
+    child_process_exec();
 
     std::cout << "fork1 main return \n";
 
