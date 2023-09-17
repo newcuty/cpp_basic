@@ -6,3 +6,5 @@ set(CMAKE_CXX_FLAG "-g")
 
 add_subdirectory(inline)
 add_subdirectory(fork)
+add_subdirectory(const)
+add_subdirectory(static)
