@@ -1,0 +1,1 @@
+/usr/bin/c++ -W -fPIC CMakeFiles/vector_demo.dir/vector.cpp.o -o vector_demo 
