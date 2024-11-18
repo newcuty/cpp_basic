@@ -7,6 +7,7 @@ set(CMAKE_CXX_FLAGS "-W -g -fPIC")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(cpp_basic_compile_src const.cpp)
 
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin/const)
 #add_library(struct SHARED struct.cpp)
 add_executable(const_demo ${cpp_basic_compile_src})
 #target_link_libraries(main)

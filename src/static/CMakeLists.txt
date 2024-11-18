@@ -7,4 +7,5 @@ set(CMAKE_CXX_FLAGS "-W -fPIC")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 set(cpp_basic_compile_src static.cpp demo.cpp)
 
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin/static)
 add_executable(static_demo ${cpp_basic_compile_src})
