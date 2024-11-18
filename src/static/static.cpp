@@ -3,7 +3,7 @@
 
 
 //when the static key word used in a normal variable changes the lifecycle of the variable;
-int function_static_value(){
+void function_static_value(){
 
 
     static int static_value = 1;
@@ -33,7 +33,7 @@ int non_static_function(){
     //the function can be called directely without define an instance of this class
 class A{
 public:
-    static int class_static_function(){
+    static void class_static_function(){
         std::cout << "this is class static function\n";
     }
 

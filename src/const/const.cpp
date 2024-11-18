@@ -8,7 +8,7 @@
 //#include <cstdio>
 #include <iostream>
 
-int function_const(){
+void function_const(){
 
     //const value
     const int value1 = 1;
@@ -28,32 +28,33 @@ int function_const(){
 
 
     //const T const* pointer which is also a const pointer 
-    const char* const pointer2 = str_base;
+    const char* const pointer2 = str_base; //must initialize when defined
     //ointer2 =  str1;        
     //*pointer2 = '0xA';         //both is not allowed, the value of pointer can modified
 
 }   
 
 
-int function_constexpr(){
+void function_constexpr(){
 
-    int a = 10;
-    int b = 20;
+    constexpr int index = 10;
+    constexpr int  b = 20;
     //constexpr int c = a + b;    //the value of c could accumlate the result immdielate
     int c = 1 + 2;
 
-    int array_const[a] = {0,0};
-    char array1[b] = {'c', 'a','b'};
+    int array_const[index] = {0,0};
+    //char array1[b] = {'c', 'a','b'};
 
-    std::cout << "array_const[0] is " << array_const[0] << "\n";
+    //std::cout << "array_const[0] is " << array_const[0] << "\n";
 }
 
 //const value used as a return value is as same as which is used in the normal value
-const int& function_return_const(){
+const int function_return_const(){
 
     const int a = 0;
     return a;
 }
+
 
 int main(int argc, char** argv){
     function_constexpr();
