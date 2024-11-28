@@ -1,11 +1,12 @@
 //for static key work
 #include <iostream>
 
+static int g_static_value = 1;
 
 //when the static key word used in a normal variable changes the lifecycle of the variable;
 void function_static_value(){
 
-
+    //static_value initialized before main()
     static int static_value = 1;
     int normal_value = 1;
 
