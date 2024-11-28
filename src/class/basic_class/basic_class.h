@@ -8,7 +8,20 @@ public:
     explicit BasicClass();
     ~BasicClass();
 
+    //move constructor
+    BasicClass(BasicClass&& other);
+
+    //copy constructor
+    BasicClass(const BasicClass& other);
+
+    //set data 
+    void setData(int data);
+    //get data
+    int getData() const;
+
 private:    
+    int data_;
+    const int& refe_data_ = data_;
 
 };  //class BasicClass
 
