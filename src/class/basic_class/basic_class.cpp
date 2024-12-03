@@ -30,3 +30,13 @@ int BasicClass::getData() const {
     std::cout << "getData called.\n";
     return data_;
 }
+
+BasicClass& BasicClass::operator=(const BasicClass& other) {
+    std::cout << "operator= called.\n";
+    if (this != &other)
+    {
+        data_ = other.data_;
+    }
+
+    return *this;
+}

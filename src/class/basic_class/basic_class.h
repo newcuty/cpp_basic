@@ -3,6 +3,16 @@
 
 #include <iostream>
 
+class People{
+public:
+    People(){
+        std::cout << "People constructor called." << std::endl;
+    }
+    ~People(){
+        std::cout << "People destructor called." << std::endl;
+    }
+};
+
 class BasicClass {
 public:
     explicit BasicClass();
@@ -19,10 +29,13 @@ public:
     //get data
     int getData() const;
 
+    //operator overloading
+    BasicClass& operator=(const BasicClass& other);
+
 private:    
     int data_;
     const int& refe_data_ = data_;
-
+    People people_;
 };  //class BasicClass
 
 #endif // BASIC_CLASS_H
