@@ -55,7 +55,27 @@ const int function_return_const(){
     return a;
 }
 
+//const value in class member function
+class ConstClass{
+public:
+    const int value = 10;
+    int value2 = 20;
+    const int getValue() const{
+        return 20;
+    }
+
+    int set_value2() const{
+        //value2 = 10;    //this is not allowed, const at last means the value cannot be modified
+    }
+
+    const int get_value2(){
+        return value2 + 10; //this is allowed, const return value means the value cannot be modified
+    }
+};
 
 int main(int argc, char** argv){
     function_constexpr();
+
+    ConstClass obj;
+    obj.getValue();
 }
