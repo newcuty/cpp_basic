@@ -14,6 +14,10 @@ void function_const(){
     const int value1 = 1;
     //value1 = 2; // this is not allowed
 
+    const int value2 = 2;
+    //int* p_value = &value2;  //this is not allow
+
+
     //const T* pointer which is normal pointer
     char* str_base = "string1";
     const char* str1 = "string2";
