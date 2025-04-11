@@ -59,11 +59,12 @@ int main(int argc, char** argv){
 
     A::class_static_function();
 
+    //all instance share same statice member.
     A instance1;
     instance1.static_member_ = 15;
-    std::cout << "static_member_ is " << instance1.static_member_ << "\n";
-    A instance2;
+    std::cout << "static_member_ is " << instance1.static_member_ << "\n";      //15
+    A instance2;    
     instance2.static_member_ = 20;
-    std::cout << "static_member_ is " << instance1.static_member_ << "\n";
-    std::cout << "static_member_ is " << instance2.static_member_ << "\n";
+    std::cout << "static_member_ is " << instance1.static_member_ << "\n";      //20
+    std::cout << "static_member_ is " << instance2.static_member_ << "\n";      //20
 }
