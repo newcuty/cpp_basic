@@ -18,19 +18,19 @@ int function_const(){
     char* str_base = "string1";
     const char* str1 = "string2";
     str1 = str_base;        //this is allowed, the pointer can point to other place
-    //*str1 = "string3";      //this is not"function_header.h" allowed
+    //*str1 = "string3";      //this is not allowed, value of str1 pointer cannot be modified
 
 
     //T const* pointer  which is a const pointer
     char* const pointer1 = str_base;
-    //pointer1 =  str1;           //this is not allowed
+    //pointer1 =  str1;           //this is not allowed, 
     *pointer1 = '0xA';             //this is allow, the value of pointer can modified
 
 
     //const T const* pointer which is also a const pointer 
     const char* const pointer2 = str_base;
     //ointer2 =  str1;        
-    //*pointer2 = '0xA';         //both is not allowed, the value of pointer can modified
+    // (*pointer2 = '0xA';)         //! both is not allowed, the value of pointer can modified
 
 }   
 
@@ -39,7 +39,7 @@ int function_constexpr(){
 
     int a = 10;
     int b = 20;
-    //constexpr int c = a + b;    //the value of c could accumlate the result immdielate
+    //constexpr int c = 10 + 20;    //the value of c could accumlate the result immdielate
     int c = 1 + 2;
 
     int array_const[a] = {0,0};
